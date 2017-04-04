@@ -1,0 +1,47 @@
+<meta charset='utf-8'>
+<form method="post" action="login.php">
+	<input type="text" name="username" />
+	<input type="password" name="password" />
+	<input type="submit" value="登录" />
+</form>
+<script type="text/javascript">
+	function (var str){
+		var length=str.length;
+		for(i=0; i <= length;i++){
+			for(j=length;j > i ;j--){
+				var temp=str.substring(i,j);
+				for(k=i; k <= j;k++ ){
+					var prvflagone=0;
+					var prvflagzero=0;
+					var nextflagone=0;
+					var nextflagzero=0;
+					var prv=temp.substring(i,k);
+					var next=temp.substring(k,j);
+					for(a=0;a<prv.length;a++){
+					    var chr = arr.charAt(a);
+					    if( chr ==0){
+					        flagzero +=1;
+					    }else{
+					        flagone +=1;
+					    }
+					}
+					if(flagzero > flagone){
+						for(b=0;b<next.length;b++){
+						    var chr = arr.charAt(b);
+						    if( chr ==0){
+						        flagzero +=1;
+						    }else{
+						        flagone +=1;
+						    }
+						}
+						if(nextflagone > nextflagzero){
+							return temp;
+						}
+					}
+
+				}
+
+			}
+		}
+	}
+</script>
